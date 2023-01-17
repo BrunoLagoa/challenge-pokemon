@@ -4,7 +4,21 @@ import chevron from "assets/images/chevronDownBlack.png";
 
 import * as S from "./styled";
 
-const InputNumber = ({ className, label, placeholder, name, suffix }) => (
+interface IProps {
+  className: string;
+  label: string;
+  placeholder: string;
+  name: string;
+  suffix: string;
+}
+
+const InputNumber = ({
+  className,
+  label,
+  placeholder,
+  name,
+  suffix,
+}: IProps) => (
   <S.InputNumberWrapper className={className}>
     {label && <S.Label>{label}</S.Label>}
 

@@ -1,10 +1,20 @@
 import React from "react";
 
-import chevron from "assets/images/chevronDownBlack.png";
+import chevron from "../../assets/images/chevronDownBlack.png";
 
 import * as S from "./styled";
 
-const DropdownPage = ({ label, options }) => (
+interface IOptions {
+  value: string;
+  text: string;
+}
+
+interface IProps {
+  label: string;
+  options: IOptions[];
+}
+
+const DropdownPage = ({ label, options }: IProps) => (
   <S.DropdownWrapper>
     {label && <S.Label>{label}</S.Label>}
 

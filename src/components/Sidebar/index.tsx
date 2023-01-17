@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import Button from "../Button";
+import Button from '../Button';
 
-import iconPlus from "../../assets/images/plus.png";
+import iconPlus from '../../assets/images/plus.png';
 
-import * as S from "./styled";
+import * as S from './styled';
 
 const Sidebar = () => (
   <S.SideBarWrapper>

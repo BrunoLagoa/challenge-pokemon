@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import * as S from "./styled";
+import * as S from './styled';
 
 interface IProps {
   className: string;

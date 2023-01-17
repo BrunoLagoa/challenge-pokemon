@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import chevron from "assets/images/chevronDownBlack.png";
+import chevron from 'assets/images/chevronDownBlack.png';
 
-import * as S from "./styled";
+import * as S from './styled';
 
 interface IProps {
   className: string;

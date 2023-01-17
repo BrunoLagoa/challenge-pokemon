@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import pokemonLogo from "../../assets/images/pokemonLogo.png";
+import styled from 'styled-components';
+import pokemonLogo from '../../assets/images/pokemonLogo.png';
 
 export const HomeWrapper = styled.div`
   display: flex;

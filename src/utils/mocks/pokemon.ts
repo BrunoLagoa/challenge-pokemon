@@ -15,6 +15,14 @@ const pokemon: IPokemon = {
     specialDefense: 40,
     speed: 90,
   },
+  sprites: {
+    other: {
+      'official-artwork': {
+        front_default:
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+      },
+    },
+  },
 };
 
 export { pokemon };

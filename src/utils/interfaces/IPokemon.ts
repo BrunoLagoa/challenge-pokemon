@@ -13,4 +13,11 @@ export interface IPokemon {
     specialDefense: number;
     speed: number;
   };
+  sprites: {
+    other: {
+      'official-artwork': {
+        front_default: string;
+      };
+    };
+  };
 }

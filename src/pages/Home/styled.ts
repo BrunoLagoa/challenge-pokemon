@@ -7,7 +7,7 @@ export const HomeWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(90deg, #43e97d, #38f8d5);
+  background: ${({ theme }) => theme.colors.primary.gradient};
   & button {
     width: 12rem;
     box-shadow: 1px 15px 30px rgba(0, 0, 0, 0.4);

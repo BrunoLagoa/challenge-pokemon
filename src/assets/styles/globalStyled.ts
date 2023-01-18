@@ -22,6 +22,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #222;
+    font-family: 'OpenSans', sans-serif;
   }
 
   a,

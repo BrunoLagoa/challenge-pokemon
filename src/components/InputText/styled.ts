@@ -12,7 +12,7 @@ export const Label = styled.label`
   font-size: 1.2rem;
   line-height: 1.6;
   text-transform: uppercase;
-  color: #2e3a59;
+  color: ${({ theme }) => theme.colors.neutral['700']};
 `;
 
 export const Input = styled.input`
@@ -20,8 +20,8 @@ export const Input = styled.input`
   font-weight: 700;
   font-size: 1.6rem;
   padding: 1.2rem 0 1.2rem 0.8rem;
-  background: #ffffff;
-  border: 2px solid #e4e9f2;
+  background: ${({ theme }) => theme.colors.neutral['100']};
+  border: 2px solid ${({ theme }) => theme.colors.neutral['400']};
   border-radius: 3px;
   overflow: hidden;
   display: flex;

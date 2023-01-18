@@ -20,21 +20,21 @@ export const SideBarItem = styled.li`
   justify-content: center;
   width: 6.4rem;
   height: 6.4rem;
-  border: 4px solid #004a45;
+  border: 4px solid ${({ theme }) => theme.colors.primary.dark};
   border-radius: 12.8rem;
   font-size: 4rem;
   font-weight: bold;
-  color: #004a45;
+  color: ${({ theme }) => theme.colors.primary.dark};
   cursor: pointer;
   transition: all 0.2s;
-  background-color: #00d68f;
+  background-color: ${({ theme }) => theme.colors.primary.default};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   &:hover {
-    background-color: #004a45;
-    color: #00d68f;
+    background-color: ${({ theme }) => theme.colors.primary.dark};
+    color: ${({ theme }) => theme.colors.primary.default};
   }
 
   &:not(last-of-type) {

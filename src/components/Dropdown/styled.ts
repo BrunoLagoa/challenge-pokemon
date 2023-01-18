@@ -15,7 +15,7 @@ export const Label = styled.label`
   font-size: 1.2rem;
   line-height: 1.6;
   text-transform: uppercase;
-  color: #2e3a59;
+  color: ${({ theme }) => theme.colors.neutral['700']};
 `;
 
 export const DropdownContent = styled.div`
@@ -27,8 +27,8 @@ export const Select = styled.select`
   font-weight: 400;
   font-size: 1.6rem;
   padding: 1.2rem 0 1.2rem 0.8rem;
-  background: #ffffff;
-  border: 2px solid #e4e9f2;
+  background: ${({ theme }) => theme.colors.neutral['100']};
+  border: 2px solid ${({ theme }) => theme.colors.neutral['740']};
   border-radius: 3px;
   overflow: hidden;
   display: flex;

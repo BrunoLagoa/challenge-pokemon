@@ -73,7 +73,6 @@ export const Search = styled.img.attrs(({ tooltip }: IProps) => ({
 }))<IProps>`
   margin-bottom: 1rem;
   opacity: 0;
-  /* animation: 0.5s ${fadeOut} ease both; */
 `;
 
 export const AshFront = styled.img.attrs({

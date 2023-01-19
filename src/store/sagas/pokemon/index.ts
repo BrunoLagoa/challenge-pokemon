@@ -1,5 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { AxiosResponse } from 'axios';
+import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
 
@@ -21,6 +22,9 @@ function* getPokemon() {
 
     yield put(pokemonActions.getPokemonSuccess(data));
   } catch (error) {
+    toast.error('Error ao carregar pokemon!', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
     yield put(pokemonActions.getPokemonFailure());
   }
 }

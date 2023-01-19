@@ -18,13 +18,13 @@
 </p>
 
 <div align="center">
-  <img src="https://sloc.xyz/github/brunolagoa/challenge-play-music" alt="Total lines">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=aritra-tech/brunolagoa.challenge-play-music" alt="Number of Visitors">
-  <a href="https://github.com/brunolagoa/challenge-play-music/stargazers"><img src="https://img.shields.io/github/stars/brunolagoa/challenge-play-music" alt="Stars Badge" /></a>
-  <a href="https://github.com/brunolagoa/challenge-play-music/network/members"><img src="https://img.shields.io/github/forks/brunolagoa/challenge-play-music" alt="Forks Badge" /></a>
-  <a href="https://github.com/brunolagoa/challenge-play-music/pulls"><img src="https://img.shields.io/github/issues-pr/brunolagoa/challenge-play-music" alt="Pull Requests Badge" /></a>
-  <a href="https://github.com/brunolagoa/challenge-play-music/issues"><img src="https://img.shields.io/github/issues/brunolagoa/challenge-play-music" alt="Issues Badge" /></a>
-  <a href="https://github.com/brunolagoa/challenge-play-music/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/brunolagoa/challenge-play-music?color=2b9348"></a>
+  <img src="https://sloc.xyz/github/brunolagoa/challenge-pokemon" alt="Total lines">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=aritra-tech/brunolagoa.challenge-pokemon" alt="Number of Visitors">
+  <a href="https://github.com/brunolagoa/challenge-pokemon/stargazers"><img src="https://img.shields.io/github/stars/brunolagoa/challenge-pokemon" alt="Stars Badge" /></a>
+  <a href="https://github.com/brunolagoa/challenge-pokemon/network/members"><img src="https://img.shields.io/github/forks/brunolagoa/challenge-pokemon" alt="Forks Badge" /></a>
+  <a href="https://github.com/brunolagoa/challenge-pokemon/pulls"><img src="https://img.shields.io/github/issues-pr/brunolagoa/challenge-pokemon" alt="Pull Requests Badge" /></a>
+  <a href="https://github.com/brunolagoa/challenge-pokemon/issues"><img src="https://img.shields.io/github/issues/brunolagoa/challenge-pokemon" alt="Issues Badge" /></a>
+  <a href="https://github.com/brunolagoa/challenge-pokemon/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/brunolagoa/challenge-pokemon?color=2b9348"></a>
 </div>
 
 <br>

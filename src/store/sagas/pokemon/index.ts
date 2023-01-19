@@ -1,4 +1,4 @@
-import { call, put, takeLatest, delay } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { AxiosResponse } from 'axios';
 
 import api from '../../../services/api';
@@ -18,8 +18,6 @@ function* getPokemon() {
       api.get,
       `/${randomPokemonId}`
     );
-
-    // yield delay(1000);
 
     yield put(pokemonActions.getPokemonSuccess(data));
   } catch (error) {

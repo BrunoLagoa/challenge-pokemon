@@ -29,10 +29,10 @@ export const Circle = styled.div<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   margin: 6px;
-  border: 6px solid ${({ theme }) => theme.colors.neutral['600']};
+  border: 6px solid ${({ theme }) => theme.colors.neutral['300']};
   border-radius: 50%;
   animation: ${spinner} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: ${({ theme }) => theme.colors.neutral['600']} transparent
+  border-color: ${({ theme }) => theme.colors.neutral['300']} transparent
     transparent transparent;
 
   &:nth-child(1) {

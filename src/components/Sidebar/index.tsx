@@ -1,11 +1,12 @@
-import React from 'react';
-
-import Button from '../Button';
+import React, { useCallback } from 'react';
+import { toast } from 'react-toastify';
 
 import iconPlus from '../../assets/images/plus.png';
 
-import * as S from './styled';
+import Button from '../Button';
 import { IPokemon } from '../../utils/interfaces/IPokemon';
+
+import * as S from './styled';
 
 interface ISidebar {
   slot: IPokemon[];
@@ -13,12 +14,22 @@ interface ISidebar {
 }
 
 const Sidebar = ({ slot, onRemovePokemon }: ISidebar) => {
-  console.log('slot', slot);
+  const handleSlotEmpty = useCallback(() => {
+    toast.info('Não existe pokemon capturado.', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  }, []);
+
+  const handleCreatePokemon = useCallback(() => {
+    console.log('createPokemon');
+  }, []);
 
   return (
     <S.SideBarWrapper>
       <S.SideBarList>
-        {!slot.length && <S.SideBarItem>?</S.SideBarItem>}
+        {!slot.length && (
+          <S.SideBarItem onClick={handleSlotEmpty}>?</S.SideBarItem>
+        )}
         {slot.map((pokemon, index) => (
           <S.SideBarItem
             key={index}
@@ -33,7 +44,7 @@ const Sidebar = ({ slot, onRemovePokemon }: ISidebar) => {
         ))}
       </S.SideBarList>
 
-      <Button icon={iconPlus} onClick={() => {}} />
+      <Button icon={iconPlus} onClick={handleCreatePokemon} />
     </S.SideBarWrapper>
   );
 };

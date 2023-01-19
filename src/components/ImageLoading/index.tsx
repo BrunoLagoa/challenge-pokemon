@@ -9,7 +9,7 @@ interface IProps {
   size?: string;
 }
 
-const ImageLoading = ({ src, alt, size = '100%' }: IProps) => {
+const ImageLoading = ({ src, alt, size = '100px' }: IProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -18,6 +18,9 @@ const ImageLoading = ({ src, alt, size = '100%' }: IProps) => {
         src={src}
         alt={alt}
         onLoad={() => {
+          setIsLoading(false);
+        }}
+        onError={() => {
           setIsLoading(false);
         }}
       />

@@ -9,6 +9,7 @@ import * as S from './styled';
 import { statsTranslation } from '../../utils/dictionary/statsTranslation';
 import { IPokemon } from '../../utils/interfaces/IPokemon';
 import { typesTranslation } from '../../utils/dictionary/typesTranslation';
+import ImageLoading from '../ImageLoading';
 
 interface IModalDetailCapture {
   pokemon: IPokemon;
@@ -45,10 +46,14 @@ const ModalDetailCapture = ({
             </S.CleanPokemon>
             <S.ModalContent>
               <S.PokemonContainer>
-                <S.PokemonAvatar
-                  src={pokemon.sprites?.other['official-artwork'].front_default}
-                  alt={pokemon.name}
-                />
+                <S.PokemonAvatarWrapper>
+                  <ImageLoading
+                    src={
+                      pokemon.sprites?.other['official-artwork'].front_default
+                    }
+                    alt={pokemon.name}
+                  />
+                </S.PokemonAvatarWrapper>
 
                 <S.PokemonContent>
                   <S.PokemonContentTitle>{pokemon.name}</S.PokemonContentTitle>

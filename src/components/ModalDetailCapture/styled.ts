@@ -73,7 +73,10 @@ export const PokemonContainer = styled.div`
   width: 100%;
 `;
 
-export const PokemonAvatar = styled.img`
+export const PokemonAvatarWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   height: 250px;
   background-size: cover;
@@ -81,6 +84,7 @@ export const PokemonAvatar = styled.img`
   border-radius: 200px;
   border: 3px solid ${({ theme }) => theme.colors.primary.default};
   margin-top: -126px;
+  overflow: hidden;
 `;
 
 export const PokemonContent = styled.div`

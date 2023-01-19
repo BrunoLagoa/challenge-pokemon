@@ -7,6 +7,19 @@ export const SideBarWrapper = styled.aside`
   left: 20px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 360px) {
+    button {
+      border-radius: 42px;
+      padding: 0rem 0rem;
+
+      &.icon {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #db2c66;
+      }
+    }
+  }
 `;
 
 export const SideBarList = styled.ul`
@@ -39,5 +52,20 @@ export const SideBarItem = styled.li`
 
   &:not(last-of-type) {
     margin-bottom: 1.6rem;
+  }
+
+  img {
+    background-size: cover;
+    width: 40px;
+  }
+
+  @media (max-width: 360px) {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid #004a45;
+
+    &:not(last-of-type) {
+      margin-bottom: 0.5rem;
+    }
   }
 `;

@@ -70,8 +70,8 @@ http://localhost:3000
 </div>
 <br/><br/>
 
-<!-- <p>Site publicado em:</p>
-<a alt="Bruno Castro" target="_blank" rel="noopener noreferrer" href="https://brunolagoa.github.io/challenge-pokemon">Clique aqui para visualizar</a> -->
+<p>Site publicado em:</p>
+<a alt="Bruno Castro" target="_blank" rel="noopener noreferrer" href="https://brunolagoa.github.io/challenge-pokemon">Clique aqui para visualizar</a>
 
 ---
 

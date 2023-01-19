@@ -10,7 +10,7 @@ import * as S from './styled';
 import { IReduxStore } from '../../utils/interfaces/IReduxStore';
 
 const MapPage = () => {
-  const { isLoading, tooltip, pokemon, isModalOpen } = useSelector(
+  const { isLoading, tooltip, pokemon, slot, isModalOpen } = useSelector(
     (state: IReduxStore) => state.pokemon
   );
 
@@ -26,18 +26,21 @@ const MapPage = () => {
     dispatch(pokemonActions.openModal(false));
   }, []);
 
-  useEffect(() => {
-    return () => {
-      dispatch(pokemonActions.clearState());
-    };
+  const handleCapturePokemon = useCallback(() => {
+    dispatch(pokemonActions.setPokemonRequest({ type: 'add' }));
+  }, []);
+
+  const handleRemovePokemon = useCallback((slotIndex: number) => {
+    dispatch(pokemonActions.setPokemonRequest({ type: 'remove', slotIndex }));
   }, []);
 
   return (
     <S.MapWrapper className="map">
-      <Sidebar />
+      <Sidebar slot={slot} onRemovePokemon={handleRemovePokemon} />
       <ModalDetailCapture
         isModalOpen={isModalOpen}
         onToggleModal={handleToggleModal}
+        onCapturePokemon={handleCapturePokemon}
         pokemon={pokemon}
       />
       <S.Content>

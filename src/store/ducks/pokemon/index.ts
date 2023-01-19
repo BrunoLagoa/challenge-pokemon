@@ -10,6 +10,9 @@ export const { Creators, Types } = createActions<
   getPokemonSuccess: ['payload'],
   getPokemonFailure: [],
 
+  setPokemonRequest: ['payload'],
+  setPokemonSuccess: ['payload'],
+
   openModal: ['payload'],
   clearState: [],
 });
@@ -34,10 +37,11 @@ const INITIAL_STATE: IPokemonState = {
       },
     },
   },
+  slot: [],
 };
 
-const getPokemonRequest = () => ({
-  ...INITIAL_STATE,
+const getPokemonRequest = (state = INITIAL_STATE) => ({
+  ...state,
   isLoading: true,
   isModalOpen: false,
   tooltip: 'searching',
@@ -54,8 +58,8 @@ const getPokemonSuccess = (
   pokemon: action.payload,
 });
 
-const getPokemonFailure = () => ({
-  ...INITIAL_STATE,
+const getPokemonFailure = (state = INITIAL_STATE) => ({
+  ...state,
   isLoading: false,
   isModalOpen: false,
   tooltip: 'error',
@@ -66,6 +70,16 @@ const openModal = (state = INITIAL_STATE, action: { payload: boolean }) => ({
   isModalOpen: action.payload,
 });
 
+const setPokemonSuccess = (
+  state = INITIAL_STATE,
+  action: { payload: IPokemon[] }
+) => ({
+  ...state,
+  isModalOpen: false,
+  tooltip: 'search',
+  slot: action.payload,
+});
+
 const clearState = () => INITIAL_STATE;
 
 export default createReducer(INITIAL_STATE, {
@@ -73,5 +87,6 @@ export default createReducer(INITIAL_STATE, {
   [Types.GET_POKEMON_SUCCESS]: getPokemonSuccess,
   [Types.GET_POKEMON_FAILURE]: getPokemonFailure,
   [Types.OPEN_MODAL]: openModal,
+  [Types.SET_POKEMON_SUCCESS]: setPokemonSuccess,
   [Types.CLEAR_STATE]: clearState,
 });

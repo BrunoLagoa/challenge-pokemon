@@ -6,6 +6,7 @@ export interface IPokemonState {
   isModalOpen: boolean;
   tooltip: string;
   pokemon: IPokemon;
+  slot: IPokemon[];
 }
 
 export interface IPokemonActions {
@@ -13,6 +14,11 @@ export interface IPokemonActions {
   getPokemonSuccess: (payload: IPokemon) => Action<void>;
   getPokemonFailure: () => Action<void>;
   openModal: (payload: boolean) => Action<void>;
+  setPokemonRequest: (payload: {
+    type: 'add' | 'remove';
+    slotIndex?: number;
+  }) => Action<void>;
+  setPokemonSuccess: (payload: IPokemon[]) => Action<void>;
   clearState: () => Action<void>;
 }
 
@@ -21,6 +27,8 @@ export type PokemonTypes =
   | 'GET_POKEMON_SUCCESS'
   | 'GET_POKEMON_FAILURE'
   | 'OPEN_MODAL'
+  | 'SET_POKEMON_REQUEST'
+  | 'SET_POKEMON_SUCCESS'
   | 'CLEAR_STATE';
 
 export interface IPokemonActionsCreators

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/challenge-pokemon/static/css/main.b3eeeea7.css",
-    "main.js": "/challenge-pokemon/static/js/main.f76e86cb.js",
+    "main.js": "/challenge-pokemon/static/js/main.14602b6c.js",
     "static/media/pageBackground.png": "/challenge-pokemon/static/media/pageBackground.72a6a81bc236ddce2156.png",
     "static/media/pokemonLogo.png": "/challenge-pokemon/static/media/pokemonLogo.e46cc9eff7d9206d3e95.png",
     "index.html": "/challenge-pokemon/index.html",
     "main.b3eeeea7.css.map": "/challenge-pokemon/static/css/main.b3eeeea7.css.map",
-    "main.f76e86cb.js.map": "/challenge-pokemon/static/js/main.f76e86cb.js.map"
+    "main.14602b6c.js.map": "/challenge-pokemon/static/js/main.14602b6c.js.map"
   },
   "entrypoints": [
     "static/css/main.b3eeeea7.css",
-    "static/js/main.f76e86cb.js"
+    "static/js/main.14602b6c.js"
   ]
 }

@@ -26,7 +26,7 @@ function* getPokemon() {
     );
 
     yield put(pokemonActions.getPokemonSuccess(data));
-    yield put(modalActions.openModal(true));
+    yield put(modalActions.open());
   } catch (error) {
     toast.error('Error ao carregar pokemon!', {
       position: toast.POSITION.TOP_RIGHT,
@@ -48,7 +48,7 @@ function* addAndRemovePokemon(
 
     if (isTypeAdd) {
       const limitCapacity = slot.length >= 6;
-      yield put(modalActions.openModal(false));
+      yield put(modalActions.close());
 
       if (limitCapacity) {
         yield put(pokemonActions.getPokemonFailure());

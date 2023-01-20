@@ -5,18 +5,23 @@ export const { Creators, Types } = createActions<
   Record<ModalTypes, ModalTypes>,
   IModalActionsCreators
 >({
-  openModal: ['payload'],
+  open: [],
+  close: [],
 });
 
 const INITIAL_STATE: IModalState = {
-  openModal: false,
+  isOpenModal: false,
 };
 
-const openModal = (state = INITIAL_STATE, action: { payload: boolean }) => ({
-  ...state,
-  openModal: action.payload,
+const open = () => ({
+  isOpenModal: true,
+});
+
+const close = () => ({
+  isOpenModal: false,
 });
 
 export default createReducer(INITIAL_STATE, {
-  [Types.OPEN_MODAL]: openModal,
+  [Types.OPEN]: open,
+  [Types.CLOSE]: close,
 });

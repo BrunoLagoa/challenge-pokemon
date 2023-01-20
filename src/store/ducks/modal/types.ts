@@ -1,14 +1,15 @@
 import { Action, ActionCreatorsMapObject } from 'redux';
 
 export interface IModalState {
-  openModal: boolean;
+  isOpenModal: boolean;
 }
 
 export interface IModalActions {
-  openModal: (payload: boolean) => Action<void>;
+  open: () => Action<void>;
+  close: () => Action<void>;
 }
 
-export type ModalTypes = 'OPEN_MODAL';
+export type ModalTypes = 'OPEN' | 'CLOSE';
 
 export interface IModalActionsCreators
   extends IModalActions,

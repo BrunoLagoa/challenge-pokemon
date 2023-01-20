@@ -3,7 +3,6 @@ import { IPokemon } from '../../../utils/interfaces/IPokemon';
 
 export interface IPokemonState {
   isLoading: boolean;
-  isModalOpen: boolean;
   tooltip: string;
   pokemon: IPokemon;
   slot: IPokemon[];
@@ -13,7 +12,6 @@ export interface IPokemonActions {
   getPokemonRequest: () => Action<void>;
   getPokemonSuccess: (payload: IPokemon) => Action<void>;
   getPokemonFailure: () => Action<void>;
-  openModal: (payload: boolean) => Action<void>;
   setPokemonRequest: (payload: {
     type: 'add' | 'remove';
     slotIndex?: number;
@@ -26,7 +24,6 @@ export type PokemonTypes =
   | 'GET_POKEMON_REQUEST'
   | 'GET_POKEMON_SUCCESS'
   | 'GET_POKEMON_FAILURE'
-  | 'OPEN_MODAL'
   | 'SET_POKEMON_REQUEST'
   | 'SET_POKEMON_SUCCESS'
   | 'CLEAR_STATE';

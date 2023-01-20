@@ -9,6 +9,8 @@ import { IPokemon } from '../../../utils/interfaces/IPokemon';
 import { IPokemonState } from '../../ducks/pokemon/types';
 import { ReduxStore } from '../../ducks';
 import { ReduxAction } from '../../';
+
+import { Creators as modalActions } from '../../ducks/modal';
 import {
   Creators as pokemonActions,
   Types as pokemonTypes,
@@ -24,6 +26,7 @@ function* getPokemon() {
     );
 
     yield put(pokemonActions.getPokemonSuccess(data));
+    yield put(modalActions.openModal(true));
   } catch (error) {
     toast.error('Error ao carregar pokemon!', {
       position: toast.POSITION.TOP_RIGHT,
@@ -45,6 +48,7 @@ function* addAndRemovePokemon(
 
     if (isTypeAdd) {
       const limitCapacity = slot.length >= 6;
+      yield put(modalActions.openModal(false));
 
       if (limitCapacity) {
         yield put(pokemonActions.getPokemonFailure());

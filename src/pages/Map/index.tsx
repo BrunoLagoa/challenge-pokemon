@@ -1,51 +1,35 @@
-import React, { useCallback } from 'react';
-import ModalDetailCapture from '../../components/ModalDetailCapture';
-
-import Sidebar from '../../components/Sidebar';
-
-import { useSelector, useDispatch } from 'react-redux';
-import { Creators as pokemonActions } from '../../store/ducks/pokemon';
-
-import * as S from './styled';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { IReduxStore } from '../../utils/interfaces/IReduxStore';
 
+import { usePokemon } from '../../hooks/usePokemon';
+import { useModal } from '../../hooks/useModal';
+
+import ModalDetailCapture from '../../components/ModalDetailCapture';
+import Sidebar from '../../components/Sidebar';
+
+import * as S from './styled';
+
 const MapPage = () => {
-  const { isLoading, tooltip, pokemon, slot, isModalOpen } = useSelector(
-    (state: IReduxStore) => state.pokemon
-  );
+  const { tooltip, slot } = useSelector((state: IReduxStore) => state.pokemon);
 
-  const dispatch = useDispatch();
+  const { pokemon, getPokemon, capturePokemon, removePokemonCaptured } =
+    usePokemon();
 
-  const handleModalDetailCapture = useCallback(() => {
-    if (isLoading) return;
-
-    dispatch(pokemonActions.getPokemonRequest());
-  }, [isLoading]);
-
-  const handleToggleModal = useCallback(() => {
-    dispatch(pokemonActions.openModal(false));
-  }, []);
-
-  const handleCapturePokemon = useCallback(() => {
-    dispatch(pokemonActions.setPokemonRequest({ type: 'add' }));
-  }, []);
-
-  const handleRemovePokemon = useCallback((slotIndex: number) => {
-    dispatch(pokemonActions.setPokemonRequest({ type: 'remove', slotIndex }));
-  }, []);
+  const { openModal, closeModal } = useModal();
 
   return (
     <S.MapWrapper className="map">
-      <Sidebar slot={slot} onRemovePokemon={handleRemovePokemon} />
+      <Sidebar slot={slot} onRemovePokemon={removePokemonCaptured} />
       <ModalDetailCapture
-        isModalOpen={isModalOpen}
-        onToggleModal={handleToggleModal}
-        onCapturePokemon={handleCapturePokemon}
+        isModalOpen={openModal}
+        onToggleModal={closeModal}
+        onCapturePokemon={capturePokemon}
         pokemon={pokemon}
       />
       <S.Content>
         <S.Search tooltip={tooltip} />
-        <S.AshFront onClick={handleModalDetailCapture} />
+        <S.AshFront onClick={getPokemon} />
       </S.Content>
     </S.MapWrapper>
   );

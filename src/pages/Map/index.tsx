@@ -16,13 +16,13 @@ const MapPage = () => {
   const { pokemon, getPokemon, capturePokemon, removePokemonCaptured } =
     usePokemon();
 
-  const { openModal, closeModal } = useModal();
+  const { isOpenModal, closeModal } = useModal();
 
   return (
     <S.MapWrapper className="map">
       <Sidebar slot={slot} onRemovePokemon={removePokemonCaptured} />
       <ModalDetailCapture
-        isModalOpen={openModal}
+        isModalOpen={isOpenModal}
         onToggleModal={closeModal}
         onCapturePokemon={capturePokemon}
         pokemon={pokemon}
